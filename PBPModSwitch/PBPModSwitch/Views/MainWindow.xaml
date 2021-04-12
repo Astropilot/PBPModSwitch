@@ -118,7 +118,7 @@
         <RowDefinition Height="5"/>
         <RowDefinition Height="*"/>
       </Grid.RowDefinitions>
-      <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White" FontSize="36" Text="{Binding Path=waitingStatus.waitingMessage}"></TextBlock>
+      <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Foreground="White" FontSize="36" Text="{Binding Path=waitingStatus.waitingMessage}" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
       <ProgressBar Visibility="{Binding waitingStatus.showProgress, Converter={StaticResource BoolToVisConverter}}" Grid.Column="0" Grid.Row="2" Value="{Binding waitingStatus.progressValue}" Maximum="{Binding waitingStatus.progressMax}" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400"></ProgressBar>
     </Grid>
   </Grid>

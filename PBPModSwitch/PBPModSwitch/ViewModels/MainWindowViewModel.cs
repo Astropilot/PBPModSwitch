@@ -57,6 +57,12 @@ namespace PBPModSwitch.ViewModels
 
             s_modCachePath = Path.Combine("core", "_mods");
 
+            if (!File.Exists("Penumbra.exe"))
+            {
+                waitingStatus.waitingMessage = "Error: It seems that the program is not placed in the game folder!";
+                return;
+            }
+
             try
             {
                 if (Directory.Exists(s_modCachePath))
